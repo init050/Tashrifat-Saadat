@@ -20,7 +20,7 @@ class Service(models.Model):
 
 
     PRICE_TYPE_CHOICES = [
-    ('fixed', 'Fixed Price'),
+    ('fixed', 'Fixed Price'),   
     ('range', 'Price Range'),
     ('custom', 'Custom Quote'),
     ]
@@ -63,6 +63,34 @@ class Service(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+    
+
+class Menu(models.Model):
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='menus')
+    title = models.CharField(max_length=200, verbose_name='Menu Title')
+
+    class Meta:
+        verbose_name = 'Menu'
+        verbose_name_plural = 'Menus'
+
+    def __str__(self) -> str:
+        return f"{self.title} - {self.service.title}"
+
+
+
+
+class MenuItem(models.Model):
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE, related_name='items')
+    title = models.CharField(max_length=200, verbose_name='Title')
+
+    class Meta:
+        verbose_name = 'Menu Item'
+        verbose_name_plural = 'Menu Items'
+
+    def __str__(self) -> str:
+        return f"{self.title} ({self.menu.title})"
     
 
 

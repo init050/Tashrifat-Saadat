@@ -21,7 +21,4 @@ class SiteSetting(models.Model):
     def __str__(self):
         return self.site_name
     
-    def save(self, *args, **kwargs):
-        if self.is_active:
-            SiteSetting.objects.exclude(pk=self.pk).update(is_active=False)
-        super().save(*args, **kwargs)
+

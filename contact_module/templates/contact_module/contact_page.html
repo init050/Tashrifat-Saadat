@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    
+    <form method="post">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <div style="color: red;">
+                <ul>
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ field.label }}: {{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+      
+        <label for="id_name">Name:</label>
+        {{ form.name }}
+
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+      
+        <label for="id_subject">Subject:</label>
+        {{ form.subject }}
+      
+        <label for="id_message">Message:</label>
+        {{ form.message }}
+      
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
