@@ -1,14 +1,19 @@
+{% load render_partial %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="{% static 'css/output.css' %}" rel="stylesheet" />
+    <title>{% block title %}{% endblock %}</title>
     {% load static %}
+    <link href="{% static 'css/output.css' %}" rel="stylesheet" />
+  
 </head>
 <body>
-    
-    
+    {% render_partial 'home_module.views.site_header_component' %}
+    {% block content %}{% endblock %}
+    {% render_partial 'home_module.views.site_footer_component' %}
 </body>
 </html>

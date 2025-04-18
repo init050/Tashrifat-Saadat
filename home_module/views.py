@@ -9,6 +9,7 @@ class HomeView(TemplateView):
     template_name = 'home_module/index.html'
 
 
+
 class AboutView(TemplateView):
     template_name = 'home_module/about.html'
 
@@ -18,3 +19,11 @@ class AboutView(TemplateView):
         site_setting : SiteSetting = SiteSetting.objects.filter(is_main_setting=True).first()
         context['site_setting'] = site_setting
         return context
+    
+
+def site_header_component(request):
+    return render(request, 'site_header_component.html')
+
+
+def site_footer_component(request):
+    return render(request, 'site_footer_component.html')
