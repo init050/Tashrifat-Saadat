@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors : {
-        'color-footer':'222C1D'
+        'color-footer-1':'FB7F20'
       },
       spacing: {
         '10p':'10%',
