@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors : {
         'color-footer-1':'FB7F20',
-        'color-b':'E88230'
+        'color-b':'#E88230',
+        'color-bb':'#F5F2F0'
       },
       spacing: {
         '10p':'10%',

@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.comments-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.comments-track {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.comments-inner {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 40s linear infinite;
+}
+
+.comment-box {
+    flex: 0 0 auto;
+    width: 320px;
+}
+
+.comments-inner:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-344px * 7)); /* width + gap of all comments */
+    }
+}
+
+/* Clone the comments for seamless loop */
+.comments-inner {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.comments-inner > * {
+    animation: none;
+}
+
+.comments-inner::before,
+.comments-inner::after {
+    content: "";
+    display: block;
+    flex: 0 0 calc((100vw - 320px) / 2);
+}

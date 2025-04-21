@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block title %}Home{% endblock title %} {% block content %}
 <div class="container mx-auto px-4 py-8">
   <div class="relative max-w-4xl mx-auto">
-    <div class="relative overflow-hidden rounded-lg shadow-lg">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg">
       <div id="gallery-container" class="relative h-[480px]">
         {% for image in img_home %}
         <div
@@ -13,7 +13,7 @@
             <h2 class="text-white text-4xl font-bold mb-6 text-center">به تاشریفات سعادت خوش آمدید</h2>
             <a
               href="#"
-              class="bg-color-b text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
+              class="bg-color-b text-gray-800 px-8 py-3 rounded-full font-semibold transition duration-300"
             >
               مشاهده خدمات
             </a>
@@ -23,6 +23,296 @@
       </div>
     </div>
   </div>
+  
+
+
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl text-center my-8">تخصص ما</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="mb-4">
+          <img src='static/img/img_home/0.svg'  class="h-8 w-8" alt="star icon">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">رویدادهای منحصر به فرد</h3>
+        <p class="text-gray-600">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="mb-4">
+            <img src='static/img/img_home/00.svg'  class="h-8 w-8" alt="star icon">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">اجرای بی‌نقص</h3>
+        <p class="text-gray-600">برنامه‌ریزی دقیق ما اطمینان می‌دهد که هر جزئیات کامل است، تا شما بتوانید آرامش داشته و لذت ببرید.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="mb-4">
+            <img src='static/img/img_home/02.svg'  class="h-8 w-8" alt="star icon">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">رویکرد شخصی‌سازی شده</h3>
+        <p class="text-gray-600">ما خدمات خود را متناسب با دیدگاه منحصر به فرد شما ارائه می‌دهیم تا رویداد شما واقعاً یکتا باشد.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="max-w-7xl mx-auto px-4 ">
+    <h2 class="text-center text-3xl my-8" >هایلایت ها</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="bg-white rounded-2xl shadow-md">
+            <img class="rounded-2xl object-cover h-52 w-full" src="static/img/img_home/h1.jpg" alt="">
+            <div class="p-5">
+                <h3 class="mb-3 font-semibold text-xl">عروسی</h3>
+                <p class="text-gray-600 mb-3">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
+                <a class="bg-color-bb text-gray-900 text-center py-3 px-6 rounded-2xl block w-full hover:bg-gray-200" href="#">نمایش گالری</a>
+            </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-md">
+            <img class="rounded-2xl object-cover h-52 w-full" src="static/img/img_home/h2.jpg" alt="">
+            <div class="p-5">
+                <h3 class="mb-3 font-semibold text-xl">سمینار</h3>
+                <p class="text-gray-600 mb-3">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
+                <a class="bg-color-bb text-gray-900 text-center py-3 px-6 rounded-2xl block w-full hover:bg-gray-200" href="#">نمایش گالری</a>
+            </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-md">
+            <img class="rounded-2xl object-cover h-52 w-full" src="static/img/img_home/h3.jpg" alt="">
+            <div class="p-5">
+                <h3 class="mb-3 font-semibold text-xl">مهمانی</h3>
+                <p class="text-gray-600 mb-3">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
+                <a class="bg-color-bb text-gray-900 text-center py-3 px-6 rounded-2xl block w-full hover:bg-gray-200" href="#">نمایش گالری</a>
+            </div>
+        </div>
+
+
+    </div>  
+  </div>
+
+
+
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl text-center my-8">چرا ما را انتخاب کنید؟</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="mb-4">
+          <img src='static/img/img_home/11.svg' class="h-8 w-8" alt="professional icon">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">متخصصان با تجربه</h3>
+        <p class="text-gray-600">تیم متخصص ما با دانش و خلاقیت فراوان، تجربه‌ای منحصر به فرد را در هر رویداد به ارمغان می‌آورد.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="mb-4">
+          <img src='static/img/img_home/12.svg' class="h-8 w-8" alt="reputation icon">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">اعتبار برجسته</h3>
+        <p class="text-gray-600">با سابقه‌ای درخشان در برگزاری رویدادهای موفق و رضایت مشتریان، ما به کیفیت و قابلیت اطمینان شناخته شده‌ایم.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="mb-4">
+          <img src='static/img/img_home/13.svg' class="h-8 w-8" alt="support icon">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">پشتیبانی متعهد</h3>
+        <p class="text-gray-600">ما در طول فرآیند برنامه‌ریزی، پشتیبانی کامل ارائه می‌دهیم تا رویداد شما بدون استرس برگزار شود.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <h2 class="text-3xl text-center mb-8">نظرات مشتریان</h2>
+    <!-- Comments Container -->
+    <div id="comments-container" class="relative h-[100px] cursor-pointer group">
+      <!-- Comments Group Container -->
+      <div class="comments-group absolute w-full transition-opacity duration-500 opacity-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Comment 1-3 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ع</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">علی محمدی</h4>
+                <p class="text-gray-500 text-sm">عروسی</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">تجربه‌ای فوق‌العاده با تیم تاشریفات سعادت داشتیم. همه چیز دقیقاً طبق برنامه پیش رفت.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">س</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">سارا احمدی</h4>
+                <p class="text-gray-500 text-sm">سمینار</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">برگزاری سمینار با این تیم حرفه‌ای، تجربه‌ای بی‌نظیر بود. توجه به جزئیات عالی بود.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">م</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">مریم رضایی</h4>
+                <p class="text-gray-500 text-sm">مهمانی</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">از برنامه‌ریزی تا اجرا، همه چیز عالی بود. تیم خلاق و با تجربه‌ای که به کارش اعتقاد دارد.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comments Group Container -->
+      <div class="comments-group absolute w-full transition-opacity duration-500 opacity-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Comment 4-6 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ر</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">رضا حسینی</h4>
+                <p class="text-gray-500 text-sm">جشن تولد</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">برگزاری جشن تولد دخترم با این تیم، خاطره‌ای فراموش نشدنی شد. دکوراسیون عالی بود.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ف</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">فاطمه کریمی</h4>
+                <p class="text-gray-500 text-sm">نامزدی</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">مراسم نامزدی ما با برنامه‌ریزی دقیق و خلاقانه به یک خاطره زیبا تبدیل شد.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ح</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">حسین نوری</h4>
+                <p class="text-gray-500 text-sm">همایش شرکتی</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">برگزاری همایش شرکتی ما با استانداردهای بالا، تأثیر مثبتی بر مهمانان داشت.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comments Group Container -->
+      <div class="comments-group absolute w-full transition-opacity duration-500 opacity-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Comment 7-9 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ز</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">زهرا محسنی</h4>
+                <p class="text-gray-500 text-sm">فارغ‌التحصیلی</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">جشن فارغ‌التحصیلی با خلاقیت و نوآوری به یک رویداد منحصر به فرد تبدیل شد.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ن</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">نیما اکبری</h4>
+                <p class="text-gray-500 text-sm">تولد شرکتی</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">جشن سالگرد شرکت با ایده‌های خلاقانه و اجرای حرفه‌ای، به یادماندنی شد.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ل</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">لیلا صادقی</h4>
+                <p class="text-gray-500 text-sm">مراسم افتتاحیه</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">افتتاحیه فروشگاه ما با برنامه‌ریزی دقیق و اجرای حرفه‌ای، بسیار موفق بود.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comments Group Container -->
+      <div class="comments-group absolute w-full transition-opacity duration-500 opacity-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Comment 10 and repeat of 1-2 for smooth transition -->
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ک</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">کیان محمودی</h4>
+                <p class="text-gray-500 text-sm">کنفرانس</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">برگزاری کنفرانس با این تیم، تجربه‌ای عالی بود. همه چیز طبق برنامه پیش رفت.</p>
+          </div>
+
+          <!-- Repeat first two comments to fill the last group -->
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">ع</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">علی محمدی</h4>
+                <p class="text-gray-500 text-sm">عروسی</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">تجربه‌ای فوق‌العاده با تیم تاشریفات سعادت داشتیم. همه چیز دقیقاً طبق برنامه پیش رفت.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:bg-gray-50">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-color-bb rounded-full flex items-center justify-center">
+                <span class="text-color-b text-xl font-bold">س</span>
+              </div>
+              <div class="mr-4">
+                <h4 class="font-semibold text-lg">سارا احمدی</h4>
+                <p class="text-gray-500 text-sm">سمینار</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">برگزاری سمینار با این تیم حرفه‌ای، تجربه‌ای بی‌نظیر بود. توجه به جزئیات عالی بود.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 {% endblock content %}
