@@ -1,4 +1,4 @@
 {
-    "tailwindcss-intellisense.trace.server": "off",
-    "tailwindCSS.emmetCompletions": false
+  "tailwindcss-intellisense.trace.server": "off",
+  "tailwindCSS.emmetCompletions": false
 }

@@ -95,9 +95,28 @@ class MenuItem(models.Model):
 
 
 class Gallery(models.Model):
+
+    CATEGORY_CHOICES = [
+        ('main', 'Main Gallery'),
+        ('slider', 'Slider Images'),
+        ('background', 'Background Images'),
+        ('featured', 'Featured Images'),
+        ('other', 'Other Images'),
+    ]
+
+    category = models.CharField(
+        max_length=20,
+        choices=CATEGORY_CHOICES,
+        default='main',
+        verbose_name='Image Category',
+        help_text='Category to filter images in different templates'
+    )
+
     service = models.ForeignKey(
         Service,
         on_delete=models.CASCADE,
+        blank=True,
+        null=True,
         related_name='service_images',
         verbose_name='Service'
     )
@@ -116,10 +135,11 @@ class Gallery(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Created At')
 
+
     class Meta:
         verbose_name = 'Service Image'
         verbose_name_plural = 'Service Images'
 
     def __str__(self):
-        return f"Image for {self.service.title}"
+        return f"{self.service.title} - {self.image.name}" if self.service else f"Unlinked Image - {self.image.name}"
 

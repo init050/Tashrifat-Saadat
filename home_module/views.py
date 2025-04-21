@@ -2,17 +2,21 @@ from typing import Any
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from site_module.models import SiteSetting
+from services_module.models import Gallery
 
 # Create your views here.
 
 class HomeView(TemplateView):
     template_name = 'home_module/index.html'
 
+    def get_context_data(self, **kwargs: Any):
+        context = super().get_context_data(**kwargs)
+        context['img_home'] = Gallery.objects.filter(category='main')
+        return context
 
 
 class AboutView(TemplateView):
     template_name = 'home_module/about.html'
-
 
     def get_context_data(self, **kwargs: Any):
         context = super().get_context_data(**kwargs)
