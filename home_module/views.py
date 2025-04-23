@@ -11,7 +11,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs: Any):
         context = super().get_context_data(**kwargs)
-        context['img_home'] = Gallery.objects.filter(category='main')
+        context['img_home'] = Gallery.objects.filter(category='main', is_active=True)
         return context
 
 
