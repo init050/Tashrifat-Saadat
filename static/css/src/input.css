@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @import 'flowbite';
+
+
+@font-face {
+    font-family: 'Iranyekan';
+    src: url('../fonts/Qs_Iranyekan medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 .comments-container {
     width: 100%;
     max-width: 100%;

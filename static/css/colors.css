@@ -1,0 +1,47 @@
+:root {
+    --primary-dark: #05445E;
+    --primary-light: #D4F1F4;
+    --primary-dark-hover: #065670;
+    --primary-light-hover: #c0e9ed;
+}
+
+/* Custom Tailwind Classes */
+.bg-primary-dark {
+    background-color: var(--primary-dark);
+}
+
+.bg-primary-light {
+    background-color: var(--primary-light);
+}
+
+.text-primary-dark {
+    color: var(--primary-dark);
+}
+
+.text-primary-light {
+    color: var(--primary-light);
+}
+
+.hover\:bg-primary-dark:hover {
+    background-color: var(--primary-dark);
+}
+
+.hover\:bg-primary-light:hover {
+    background-color: var(--primary-light);
+}
+
+.hover\:text-primary-dark:hover {
+    color: var(--primary-dark);
+}
+
+.hover\:text-primary-light:hover {
+    color: var(--primary-light);
+}
+
+.border-primary-dark {
+    border-color: var(--primary-dark);
+}
+
+.border-primary-light {
+    border-color: var(--primary-light);
+} 

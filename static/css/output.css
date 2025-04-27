@@ -1945,10 +1945,6 @@ input:checked + .toggle-bg {
   max-width: 80rem;
 }
 
-.max-w-full {
-  max-width: 100%;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2301,6 +2297,10 @@ input:checked + .toggle-bg {
   --tw-bg-opacity: 0.9;
 }
 
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -2374,6 +2374,10 @@ input:checked + .toggle-bg {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .px-2 {
@@ -2463,6 +2467,10 @@ input:checked + .toggle-bg {
   text-align: right;
 }
 
+.font-iranyekan {
+  font-family: Iranyekan, sans-serif;
+}
+
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -2509,6 +2517,11 @@ input:checked + .toggle-bg {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -2721,6 +2734,18 @@ input:checked + .toggle-bg {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@font-face {
+  font-family: 'Iranyekan';
+
+  src: url('../fonts/Qs_Iranyekan medium.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
 }
 
 .comments-container {

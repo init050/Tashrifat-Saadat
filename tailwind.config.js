@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'iranyekan': ['Iranyekan', 'sans-serif'],
+      },
       colors : {
         'color-footer-1':'FB7F20',
         'color-b':'#E88230',
