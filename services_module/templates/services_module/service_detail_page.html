@@ -1,23 +1,269 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    {{service.title}} {{service.short_description}} {{service.max_guests}} {{service.description}} {% for menu in menus
-    %}
-    <h3>{{ menu.title }}</h3>
+{% extends 'base.html' %}
+{% load static %}
 
-    <ul>
-      {% for item in menu.items.all %}
-      <li>{{ item.title }}</li>
+{% block title %}{{ service.title }} - خدمات تشریفات{% endblock title %}
+
+{% block content %}
+<div id="service-detail" class="font-sans text-gray-900" dir="rtl">
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center text-white" 
+             style="background-image: url('{{ service.image.url }}'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
+        <div class="relative z-10 max-w-3xl px-8">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">{{ service.title }}</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">{{ service.description }}</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-8">
+            <h2 class="text-4xl font-semibold text-center mb-12">منوی خدمات</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for menu in menus %}
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">{{ menu.title }}</h3>
+                    <ul class="space-y-2">
+                        {% for item in menu.items.all %}
+                        <li class="text-gray-600">{{ item.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery with Navigation -->
+    {% comment %} <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-8">
+            <h2 class="text-4xl font-semibold text-center mb-12">گالری تصاویر</h2>
+            
+            <!-- Modern Gallery Container -->
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Main Gallery View -->
+                <div class="relative h-[600px] rounded-3xl overflow-hidden bg-black/5 backdrop-blur-sm">
+                    <div id="gallery-container" class="h-full">
+                        {% for image in gallery %}
+                        <div class="absolute inset-0 w-full h-full transition-all duration-500 {% if not forloop.first %}opacity-0 pointer-events-none{% endif %}"
+                             data-index="{{ forloop.counter0 }}">
+                            <img src="{{ image.image.url }}" 
+                                 alt="{{ image.description }}"
+                                 class="w-full h-full object-cover"
+                                 onclick="openLightbox('{{ image.image.url }}', '{{ image.description }}')">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
+                                <p class="text-white text-lg">{{ image.description }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <div class="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4">
+                        <button id="prev-button" 
+                                class="w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center 
+                                       hover:bg-white transition-all duration-300 shadow-lg hover:scale-110">
+                            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <button id="next-button" 
+                                class="w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center 
+                                       hover:bg-white transition-all duration-300 shadow-lg hover:scale-110">
+                            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Thumbnail Navigation -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {% for image in gallery %}
+                        <button class="thumbnail-button w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 
+                                       {% if forloop.first %}bg-white{% endif %}"
+                                data-index="{{ forloop.counter0 }}">
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  {% endcomment %}
+
+    
+
+<div id="gallery" class="relative w-full" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+      {% for image in gallery %}
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="{{ image.image.url }}" 
+               alt="{{ image.description }}"
+               class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+      </div>
       {% endfor %}
-    </ul>
+  </div>
+  <!-- Slider controls -->
+  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+          </svg>
+          <span class="sr-only">Previous</span>
+      </span>
+  </button>
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+          </svg>
+          <span class="sr-only">Next</span>
+      </span>
+  </button>
+</div>
 
-    {% endfor %} {% for image in gallery %}
-    <img src="{{ image.image.url }}" alt="s" />
-    {% endfor %}
-  </body>
-</html>
+
+
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center">
+    <div class="relative max-w-4xl w-full mx-4">
+        <img id="lightbox-image" src="" alt="" class="w-full h-auto">
+        <p id="lightbox-caption" class="text-white text-center mt-4"></p>
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-2xl hover:text-amber-500">
+            ×
+        </button>
+    </div>
+</div>
+{% endblock content %}
+
+{% comment %} {% block extra_js %}
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let currentImageIndex = 0;
+    const totalImages = {{ gallery|length }};
+    const images = document.querySelectorAll('#gallery-container > div');
+    const thumbnails = document.querySelectorAll('.thumbnail-button');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+
+    function updateGallery() {
+        // Update main image
+        images.forEach((img, index) => {
+            if (index === currentImageIndex) {
+                img.style.opacity = '1';
+                img.style.pointerEvents = 'auto';
+            } else {
+                img.style.opacity = '0';
+                img.style.pointerEvents = 'none';
+            }
+        });
+
+        // Update thumbnails
+        thumbnails.forEach((thumb, index) => {
+            if (index === currentImageIndex) {
+                thumb.classList.add('bg-white');
+                thumb.classList.remove('bg-white/50');
+            } else {
+                thumb.classList.remove('bg-white');
+                thumb.classList.add('bg-white/50');
+            }
+        });
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % totalImages;
+        updateGallery();
+    }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+        updateGallery();
+    }
+
+    function goToImage(index) {
+        currentImageIndex = index;
+        updateGallery();
+    }
+
+    // Add event listeners
+    prevButton.addEventListener('click', prevImage);
+    nextButton.addEventListener('click', nextImage);
+    
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => goToImage(index));
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+            nextImage();
+        } else if (e.key === 'ArrowLeft') {
+            prevImage();
+        }
+    });
+
+    // Touch/Swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const galleryContainer = document.getElementById('gallery-container');
+
+    galleryContainer.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    galleryContainer.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+            nextImage();
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+            prevImage();
+        }
+    }
+
+    // Initialize gallery
+    updateGallery();
+});
+
+// Lightbox functions
+function openLightbox(imageUrl, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    
+    lightboxImage.src = imageUrl;
+    lightboxCaption.textContent = caption;
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+// Close lightbox when clicking outside the image
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !document.getElementById('lightbox').classList.contains('hidden')) {
+        closeLightbox();
+    }
+});
+</script>
+{% endblock extra_js %} {% endcomment %}

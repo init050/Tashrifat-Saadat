@@ -1,7 +1,7 @@
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from services_module.models import Service 
+from services_module.models import Service , Gallery , Menu , MenuItem
 # Create your views here.
 
 
@@ -10,7 +10,8 @@ class ServiceListView(ListView):
     template_name = 'services_module/service_page.html'
 
     def get_context_data(self):
-        context = super(ServiceListView, self).get_context_data()
+        context = super().get_context_data()
+        context['services'] = Service.objects.filter(is_active=True)
         return context
     
     def get_queryset(self):
@@ -26,9 +27,8 @@ class ServiceDetailView(DetailView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        service = self.object
-        context['gallery'] = service.service_images.filter(is_active=True)
-        context['menus'] = self.object.menus.prefetch_related('items')
+        context['gallery'] = Gallery.objects.filter(category='other', is_active=True)
+        context['menus'] = Menu.objects.filter(service=self.object)
         return context
     
 

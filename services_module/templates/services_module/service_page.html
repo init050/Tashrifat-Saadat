@@ -1,15 +1,118 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    {% for service in object_list %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Services
+{% endblock title %}
 
-    <a href="{% url 'service_detail_page' pk=service.id %}">{{ service.title }}</a>
+{% block content %}
+<section class="services-section py-24 bg-gradient-to-br from-ivory-50 via-ivory-100 to-ivory-50">
+    <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-20">
+            <h2 class="font-serif text-5xl text-charcoal-900 mb-4">خدمات اختصاصی ما</h2>
+            <p class="font-sans text-lg tracking-wider text-charcoal-700">طراحی و اجرای مراسم‌های منحصر به فرد</p>
+        </div>
 
-    {% endfor %}
-  </body>
-</html>
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for service in services %}
+            <div class="service-card group relative bg-white rounded-3xl overflow-hidden transform transition-all duration-500 hover:shadow-2xl">
+                <!-- Main Image -->
+                <div class="relative aspect-w-16 aspect-h-9">
+                    {% if service.image %}
+                        <img src="{{ service.image.url }}" 
+                             alt="{{ service.title }}" 
+                             class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                    {% else %}
+                        <img src="{% static 'images/services/default.jpg' %}" 
+                             alt="{{ service.title }}" 
+                             class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                    {% endif %}
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/70 via-charcoal-900/30 to-transparent"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="p-8 relative">
+                    <!-- Title and Description -->
+                    <h3 class="font-serif text-2xl text-charcoal-900 mb-4 text-right group-hover:text-gold-500 transition-colors duration-300">{{ service.title }}</h3>
+                    <p class="text-charcoal-700/80 mb-6 text-right leading-relaxed group-hover:text-charcoal-900 transition-colors duration-300">
+                        {{ service.short_description }}
+                    </p>
+
+                    <!-- Action Button -->
+                    <a href="{% url 'service_detail_page' service.pk %}" class="inline-block px-6 py-3 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/30 text-gold-500 rounded-full font-medium transition-all duration-300 hover:from-gold-500 hover:to-gold-400 hover:text-white group-hover:shadow-lg group-hover:shadow-gold-500/20 text-center">
+                        اطلاعات بیشتر
+                    </a>
+                </div>
+
+                <!-- Decorative Elements -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/5 rounded-full blur-3xl transform group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-gold-500/5 rounded-full blur-3xl transform group-hover:scale-150 transition-transform duration-500"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Custom Styles */
+    .services-section {
+        background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    }
+
+    .service-card {
+        position: relative;
+        background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 100%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animation Classes */
+    .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Liquid Opulence Effect */
+    .liquid-opulence {
+        background: linear-gradient(135deg, 
+            rgba(212, 175, 55, 0.05) 0%,
+            rgba(255, 255, 255, 0.02) 50%,
+            rgba(212, 175, 55, 0.05) 100%);
+        background-size: 200% 200%;
+        animation: liquidFlow 15s ease infinite;
+    }
+
+    @keyframes liquidFlow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+</style>
+
+
+{% endblock content %}
