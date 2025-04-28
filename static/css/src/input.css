@@ -3,6 +3,24 @@
 @tailwind utilities;
 @import 'flowbite';
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  #comments-container {
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
+  }
+
+  .comments-group {
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
 
 @font-face {
     font-family: 'Iranyekan';

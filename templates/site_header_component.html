@@ -1,20 +1,20 @@
-<header class="border-b border-gray-300">
+<header class="fixed top-0 left-0 right-0 z-50 border-b bg-white border-gray-300">
   <nav>
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between h-16 border-b border-gray-200">
         <div class="flex items-center justify-center flex-1">
           <ul class="flex items-center justify-center space-x-8 rtl:space-x-reverse">
             <li>
-              <a href="{% url 'home_page' %}" class="text-gray-700 hover:text-gray-900">خانه</a>
+              <a href="{% url 'home_page' %}" class="text-gray-700 hover:text-gray-900 {% if request.path == '/' %}bg-[#05445E] text-white px-4 py-2 rounded-lg{% endif %}">خانه</a>
             </li>
             <li>
-              <a href="{% url 'service_page' %}" class="text-gray-700 hover:text-gray-900">خدمات</a>
+              <a href="{% url 'service_page' %}" class="text-gray-700 hover:text-gray-900 {% if '/service' in request.path %}bg-[#05445E] text-white px-4 py-2 rounded-lg{% endif %}">خدمات</a>
             </li>
             <li>
-              <a href="{% url 'contact_page' %}" class="text-gray-700 hover:text-gray-900">تماس با ما</a>
+              <a href="{% url 'contact_page' %}" class="text-gray-700 hover:text-gray-900 {% if '/contact' in request.path %}bg-[#05445E] text-white px-4 py-2 rounded-lg{% endif %}">تماس با ما</a>
             </li>
             <li>
-              <a href="{% url 'about_page' %}" class="text-gray-700 hover:text-gray-900">درباره ما</a>
+              <a href="{% url 'about_page' %}" class="text-gray-700 hover:text-gray-900 {% if '/about' in request.path %}bg-[#05445E] text-white px-4 py-2 rounded-lg{% endif %}">درباره ما</a>
             </li>
             <li>
               <a href="#" class="text-gray-700 hover:text-gray-900">لوکیشن</a>

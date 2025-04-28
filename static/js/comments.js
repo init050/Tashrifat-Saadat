@@ -1,41 +1,71 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const container = document.getElementById('comments-container');
-  const commentGroups = container.getElementsByClassName('comments-group');
-  let currentIndex = 0;
-  let interval;
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('comments-container');
+    const comments = Array.from(container.querySelectorAll('.comments-group'));
+    const nextBtn = document.getElementById('next-comment');
+    const prevBtn = document.getElementById('prev-comment');
+    let currentIndex = 0;
+    const totalComments = comments.length;
 
-  // Show first group initially
-  commentGroups[0].classList.add('opacity-100');
 
-  function showGroup(index) {
-    for (let i = 0; i < commentGroups.length; i++) {
-      commentGroups[i].classList.remove('opacity-100');
-      commentGroups[i].classList.add('opacity-0');
+    function initializeComments() {
+      comments.forEach((comment, index) => {
+        comment.style.transition = 'all 0.5s ease';
+        if (index === 0) {
+          comment.style.transform = 'translateX(0)';
+          comment.style.opacity = '1';
+        } else {
+          comment.style.transform = 'translateX(100%)';
+          comment.style.opacity = '0';
+        }
+      });
     }
 
-    commentGroups[index].classList.remove('opacity-0');
-    commentGroups[index].classList.add('opacity-100');
-  }
+    initializeComments();
 
-  function nextGroup() {
-    currentIndex = (currentIndex + 1) % commentGroups.length;
-    showGroup(currentIndex);
-  }
+    function moveSlide(direction) {
+      const current = comments[currentIndex];
+      let nextIndex;
+      
+      if (direction === 'next') {
+        nextIndex = (currentIndex + 1) % totalComments;
+        comments[nextIndex].style.transform = 'translateX(100%)';
+      } else {
+        nextIndex = (currentIndex - 1 + totalComments) % totalComments;
+        comments[nextIndex].style.transform = 'translateX(-100%)';
+      }
 
-  // Start the interval
-  function startInterval() {
-    interval = setInterval(nextGroup, 4000);
-  }
+      const next = comments[nextIndex];
+      next.style.opacity = '0';
 
-  // Stop the interval
-  function stopInterval() {
-    clearInterval(interval);
-  }
+      requestAnimationFrame(() => {
+        current.style.transform = direction === 'next' ? 'translateX(-100%)' : 'translateX(100%)';
+        current.style.opacity = '0';
 
-  // Add hover handlers
-  container.addEventListener('mouseenter', stopInterval);
-  container.addEventListener('mouseleave', startInterval);
+        next.style.transform = 'translateX(0)';
+        next.style.opacity = '1';
+      });
 
-  // Start initial interval
-  startInterval();
-}); 
+      currentIndex = nextIndex;
+    }
+
+    nextBtn.addEventListener('click', () => moveSlide('next'));
+    prevBtn.addEventListener('click', () => moveSlide('prev'));
+
+    let touchStartX = 0;
+    container.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    container.addEventListener('touchend', e => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          moveSlide('next');
+        } else {
+          moveSlide('prev');
+        }
+      }
+    });
+  });
