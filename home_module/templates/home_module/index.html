@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block title %}Home{% endblock title %} {% block content %}
 
-
 <div class="container-fluid p-0">
+  <!-- Hero Section -->
   <div class="relative w-full">
     <div class="relative overflow-hidden">
       <div id="gallery-container" class="relative h-screen w-full">
@@ -26,467 +26,397 @@
     </div>
   </div>
   
-  <div class="container-fluid p-0">
-    <h2 class="text-4xl font-bold text-center py-16">تخصص ما</h2>
-    <section class="py-12 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <!-- First Card -->
-          <div class="bg-gray-100 text-gray-900 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
-            <div class="mb-6">
-              <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
-                <img src='static/img/img_home/0.svg' class="h-6 w-6 invert" alt="star icon">
-              </div>
-            </div>
-            <h3 class="text-xl font-bold mb-3">رویدادهای منحصر به فرد</h3>
-            <p class="text-gray-600 text-sm group-hover:text-white/80">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
+  <!-- Welcome Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Content Section -->
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-4xl font-bold text-gray-900 mb-4">به تشریفات سعادت خوش آمدید!</h3>
+            <p class="text-gray-600 leading-relaxed mb-8">با تجربه و تخصص برتر، ما بهترین خدمات تشریفات مجالس را برای شما فراهم می‌کنیم. رضایت شما تضمین ماست!</p>
           </div>
 
-          <!-- Second Card -->
-          <div class="bg-gray-100 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
-            <div class="mb-6">
-              <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
-                <img src='static/img/img_home/00.svg' class="h-6 w-6 invert" alt="star icon">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
+              <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <img src='static/img/img_home/11.svg' class="h-6 w-6 invert" alt="professional icon">
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 group-hover:text-white">متخصصان با تجربه</h4>
+                <p class="text-sm text-gray-600 group-hover:text-white/80">تیم متخصص و حرفه‌ای</p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-white">اجرای بی‌نقص</h3>
-            <p class="text-gray-600 text-sm group-hover:text-white/80">برنامه‌ریزی دقیق ما اطمینان می‌دهد که هر جزئیات کامل است، تا شما بتوانید آرامش داشته و لذت ببرید.</p>
-          </div>
 
-          <!-- Third Card -->
-          <div class="bg-gray-100 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
-            <div class="mb-6">
-              <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
-                <img src='static/img/img_home/02.svg' class="h-6 w-6 invert" alt="star icon">
+            <!-- Feature 2 -->
+            <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
+              <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <img src='static/img/img_home/12.svg' class="h-6 w-6 invert" alt="reputation icon">
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 group-hover:text-white">اعتبار برجسته</h4>
+                <p class="text-sm text-gray-600 group-hover:text-white/80">سابقه درخشان خدمات</p>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-white">رویکرد شخصی‌سازی شده</h3>
-            <p class="text-gray-600 text-sm group-hover:text-white/80">ما خدمات خود را متناسب با دیدگاه منحصر به فرد شما ارائه می‌دهیم تا رویداد شما واقعاً یکتا باشد.</p>
-          </div>
 
-          <!-- Fourth Card -->
-          <div class="bg-gray-100 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
-            <div class="mb-6">
-              <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
+            <!-- Feature 3 -->
+            <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
+              <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <img src='static/img/img_home/13.svg' class="h-6 w-6 invert" alt="support icon">
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 group-hover:text-white">پشتیبانی متعهد</h4>
+                <p class="text-sm text-gray-600 group-hover:text-white/80">همراهی در تمام مراحل</p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
+              <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 group-hover:text-white">قیمت مناسب</h4>
+                <p class="text-sm text-gray-600 group-hover:text-white/80">بهترین کیفیت با قیمت عالی</p>
+              </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-white">خدمات حرفه‌ای</h3>
-            <p class="text-gray-600 text-sm group-hover:text-white/80">با تیمی مجرب و متخصص، ما بهترین کیفیت خدمات را برای مراسم شما تضمین می‌کنیم.</p>
+          </div>
+
+          <div class="flex gap-4 mt-8">
+            <a href="{% url 'contact_page' %}" class="px-6 py-3 bg-[#05445E] text-white rounded-xl hover:bg-[#05445E]/90 transition-colors">تماس با ما</a>
+            <a href="{% url 'about_page' %}" class="px-6 py-3 bg-gray-100 text-gray-900 rounded-xl hover:bg-gray-200 transition-colors">اطلاعات بیشتر</a>
+          </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden border-8 border-[#05445E]/10">
+            <img src="static/img/img_home/h1.jpg" alt="تشریفات مجالس" class="w-full h-[500px] object-cover">
+          </div>
+          <div class="absolute -bottom-8 -left-8 w-64 h-64 rounded-3xl overflow-hidden border-8 border-[#05445E]/10">
+            <img src="static/img/img_home/h2.jpg" alt="خدمات مراسم" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div class="space-y-6">
-            <h2 class="text-4xl font-bold text-gray-900">خدمات مجالس ما
-              <span class="block mt-2">تبدیل رویای شما به واقعیت</span>
-            </h2>
-            <p class="text-gray-600 leading-relaxed">
-              با تمرکز بر کیفیت برتر و توجه به جزئیات، ما در تلاش هستیم تا بهترین خدمات را در تمامی جنبه‌های مراسم شما ارائه دهیم. از برنامه‌ریزی اولیه تا اجرای نهایی، تیم ما با تخصص و تعهد کامل در کنار شماست تا مراسمی به یادماندنی را رقم بزنیم.
-            </p>
-            <a href="tel:+98" class="inline-flex items-center px-6 py-3 bg-[#05445E] text-white rounded-lg hover:bg-[#05445E]/90 transition-colors">
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+  <!-- Section Title -->
+  <div class="py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center">تخصص ما</h2>
+    </div>
+  </div>
+
+  <!-- Expertise Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- First Card -->
+        <div class="bg-gray-100 text-gray-900 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
+          <div class="mb-6">
+            <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
+              <img src='static/img/img_home/0.svg' class="h-6 w-6 invert" alt="star icon">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-3">رویدادهای منحصر به فرد</h3>
+          <p class="text-gray-600 text-sm group-hover:text-white/80">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
+        </div>
+
+        <!-- Second Card -->
+        <div class="bg-gray-100 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
+          <div class="mb-6">
+            <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
+              <img src='static/img/img_home/00.svg' class="h-6 w-6 invert" alt="star icon">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-white">اجرای بی‌نقص</h3>
+          <p class="text-gray-600 text-sm group-hover:text-white/80">برنامه‌ریزی دقیق ما اطمینان می‌دهد که هر جزئیات کامل است، تا شما بتوانید آرامش داشته و لذت ببرید.</p>
+        </div>
+
+        <!-- Third Card -->
+        <div class="bg-gray-100 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
+          <div class="mb-6">
+            <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
+              <img src='static/img/img_home/02.svg' class="h-6 w-6 invert" alt="star icon">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-white">رویکرد شخصی‌سازی شده</h3>
+          <p class="text-gray-600 text-sm group-hover:text-white/80">ما خدمات خود را متناسب با دیدگاه منحصر به فرد شما ارائه می‌دهیم تا رویداد شما واقعاً یکتا باشد.</p>
+        </div>
+
+        <!-- Fourth Card -->
+        <div class="bg-gray-100 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-2 hover:bg-[#05445E] hover:text-white group">
+          <div class="mb-6">
+            <div class="w-12 h-12 bg-[#05445E] rounded-full flex items-center justify-center group-hover:bg-white/20">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
-              تماس با ما
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-white">خدمات حرفه‌ای</h3>
+          <p class="text-gray-600 text-sm group-hover:text-white/80">با تیمی مجرب و متخصص، ما بهترین کیفیت خدمات را برای مراسم شما تضمین می‌کنیم.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Title -->
+  <div class="py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center">هایلایت ها</h2>
+    </div>
+  </div>
+
+  <!-- Highlights Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {% for service in services %}
+        <!-- Highlight Cards -->
+        <div class="bg-gray-100 rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group hover:bg-[#05445E]">
+          <div class="relative h-64">
+            <img class="absolute inset-0 w-full h-full object-cover" src="{{ service.image.url }}" alt="{{ service.title }}">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 group-hover:from-[#05445E] to-transparent opacity-60 transition-colors duration-300"></div>
+          </div>
+          <div class="p-6 text-gray-900 group-hover:text-white">
+            <h3 class="mb-3 font-bold text-2xl">{{ service.title }}</h3>
+            <p class="text-gray-600 group-hover:text-white/80 mb-4 text-sm">{{ service.short_description }}</p>
+            <a class="inline-flex items-center px-4 py-2 bg-[#05445E] group-hover:bg-white/10 text-white rounded-lg transition-colors" href="{% url 'service_detail_page' service.id %}">
+              <span>نمایش گالری</span>
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
             </a>
           </div>
-
-          <div class="relative h-[500px]">
-            <div class="grid grid-cols-2 gap-8">
-              <div class="relative -mt-8 transform hover:-translate-y-2 transition-transform duration-300">
-                <img src="static/img/img_home/h1.jpg" alt="تشریفات مجالس" class="w-full h-56 object-cover rounded-2xl shadow-lg">
-                <div class="absolute bottom-4 right-4 bg-[#05445E] text-white p-4 rounded-xl shadow-lg">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
-                  </svg>
-                  <span class="block mt-1 text-sm">تشریفات مجلل</span>
-                </div>
-              </div>
-
-              <div class="relative mt-6 transform hover:-translate-y-2 transition-transform duration-300">
-                <img src="static/img/img_home/h2.jpg" alt="خدمات مراسم" class="w-full h-56 object-cover rounded-2xl shadow-lg">
-                <div class="absolute bottom-4 right-4 bg-[#05445E] text-white p-4 rounded-xl shadow-lg">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                  </svg>
-                  <span class="block mt-1 text-sm">طراحی خاص</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="absolute -bottom-4 left-[55%] transform -translate-x-1/2 w-[45%] hover:-translate-y-2 transition-transform duration-300">
-              <div class="relative">
-                <img src="static/img/img_home/h3.jpg" alt="خدمات تخصصی" class="w-full h-56 object-cover rounded-2xl shadow-lg">
-                <div class="absolute bottom-4 right-4 bg-[#05445E] text-white p-4 rounded-xl shadow-lg">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                  </svg>
-                  <span class="block mt-1 text-sm">خدمات تخصصی</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+        {% endfor %}
       </div>
-    </section>
+    </div>
+  </section>
 
-    <h2 class="text-4xl font-bold text-center py-24">هایلایت ها</h2>
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-gray-100 rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group hover:bg-[#05445E]">
-                <div class="relative h-64">
-                    <img class="absolute inset-0 w-full h-full object-cover" src="static/img/img_home/h1.jpg" alt="">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 group-hover:from-[#05445E] to-transparent opacity-60 transition-colors duration-300"></div>
-                </div>
-                <div class="p-6 text-gray-900 group-hover:text-white">
-                    <h3 class="mb-3 font-bold text-2xl">عروسی</h3>
-                    <p class="text-gray-600 group-hover:text-white/80 mb-4 text-sm">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
-                    <a class="inline-flex items-center px-4 py-2 bg-[#05445E] group-hover:bg-white/10 text-white rounded-lg transition-colors" href="#">
-                        <span>نمایش گالری</span>
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-100 rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group hover:bg-[#05445E]">
-                <div class="relative h-64">
-                    <img class="absolute inset-0 w-full h-full object-cover" src="static/img/img_home/h2.jpg" alt="">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 group-hover:from-[#05445E] to-transparent opacity-60 transition-colors duration-300"></div>
-                </div>
-                <div class="p-6 text-gray-900 group-hover:text-white">
-                    <h3 class="mb-3 font-bold text-2xl">سمینار</h3>
-                    <p class="text-gray-600 group-hover:text-white/80 mb-4 text-sm">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
-                    <a class="inline-flex items-center px-4 py-2 bg-[#05445E] group-hover:bg-white/10 text-white rounded-lg transition-colors" href="#">
-                        <span>نمایش گالری</span>
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-100 rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group hover:bg-[#05445E]">
-                <div class="relative h-64">
-                    <img class="absolute inset-0 w-full h-full object-cover" src="static/img/img_home/h3.jpg" alt="">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 group-hover:from-[#05445E] to-transparent opacity-60 transition-colors duration-300"></div>
-                </div>
-                <div class="p-6 text-gray-900 group-hover:text-white">
-                    <h3 class="mb-3 font-bold text-2xl">مهمانی</h3>
-                    <p class="text-gray-600 group-hover:text-white/80 mb-4 text-sm">از گردهمایی‌های صمیمی تا جشن‌های بزرگ، ما در برگزاری رویدادهای به یادماندنی تخصص داریم.</p>
-                    <a class="inline-flex items-center px-4 py-2 bg-[#05445E] group-hover:bg-white/10 text-white rounded-lg transition-colors" href="#">
-                        <span>نمایش گالری</span>
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>  
-      </div>
-    </section>
-
-    <h2 class="text-4xl font-bold text-center py-24">چرا ما را انتخاب کنید؟</h2>
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <!-- Content Section -->
-          <div class="space-y-8">
-            <div>
-              <h3 class="text-4xl font-bold text-gray-900 mb-4">به تشریفات سعادت خوش آمدید!</h3>
-              <p class="text-gray-600 leading-relaxed mb-8">با تجربه و تخصص برتر، ما بهترین خدمات تشریفات مجالس را برای شما فراهم می‌کنیم. رضایت شما تضمین ماست!</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <!-- Feature 1 -->
-              <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
-                <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <img src='static/img/img_home/11.svg' class="h-6 w-6 invert" alt="professional icon">
-                </div>
-                <div>
-                  <h4 class="font-semibold text-gray-900 group-hover:text-white">متخصصان با تجربه</h4>
-                  <p class="text-sm text-gray-600 group-hover:text-white/80">تیم متخصص و حرفه‌ای</p>
-                </div>
-              </div>
-
-              <!-- Feature 2 -->
-              <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
-                <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <img src='static/img/img_home/12.svg' class="h-6 w-6 invert" alt="reputation icon">
-                </div>
-                <div>
-                  <h4 class="font-semibold text-gray-900 group-hover:text-white">اعتبار برجسته</h4>
-                  <p class="text-sm text-gray-600 group-hover:text-white/80">سابقه درخشان خدمات</p>
-                </div>
-              </div>
-
-              <!-- Feature 3 -->
-              <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
-                <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <img src='static/img/img_home/13.svg' class="h-6 w-6 invert" alt="support icon">
-                </div>
-                <div>
-                  <h4 class="font-semibold text-gray-900 group-hover:text-white">پشتیبانی متعهد</h4>
-                  <p class="text-sm text-gray-600 group-hover:text-white/80">همراهی در تمام مراحل</p>
-                </div>
-              </div>
-
-              <!-- Feature 4 -->
-              <div class="bg-gray-50 p-4 rounded-xl flex items-center space-x-4 rtl:space-x-reverse group hover:bg-[#05445E] transition-all duration-300">
-                <div class="w-12 h-12 bg-[#05445E] group-hover:bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-gray-900 group-hover:text-white">قیمت مناسب</h4>
-                  <p class="text-sm text-gray-600 group-hover:text-white/80">بهترین کیفیت با قیمت عالی</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 mt-8">
-              <a href="#" class="px-6 py-3 bg-[#05445E] text-white rounded-xl hover:bg-[#05445E]/90 transition-colors">تماس با ما</a>
-              <a href="#" class="px-6 py-3 bg-gray-100 text-gray-900 rounded-xl hover:bg-gray-200 transition-colors">اطلاعات بیشتر</a>
-            </div>
-          </div>
-
-          <!-- Image Section -->
-          <div class="relative">
-            <div class="rounded-3xl overflow-hidden border-8 border-[#05445E]/10">
-              <img src="static/img/img_home/h1.jpg" alt="تشریفات مجالس" class="w-full h-[500px] object-cover">
-            </div>
-            <div class="absolute -bottom-8 -left-8 w-64 h-64 rounded-3xl overflow-hidden border-8 border-[#05445E]/10">
-              <img src="static/img/img_home/h2.jpg" alt="خدمات مراسم" class="w-full h-full object-cover">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <h2 class="text-4xl font-bold text-center py-24">نظرات مشتریان</h2>
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <!-- Text Content -->
-          <div class="space-y-6">
-            <h3 class="text-4xl font-bold text-gray-900">تجربه مشتریان ما</h3>
-            <p class="text-gray-600 leading-relaxed">
-              نظرات مشتریان رضایتمند ما را بخوانید. ببینید چگونه خدمات ما در برگزاری مراسم‌های مختلف، تجربه‌ای به یادماندنی برای آنها رقم زده است.
-            </p>
-            <div class="flex gap-4 mt-8">
-              <button id="next-comment" class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#05445E] text-white hover:bg-[#05445E]/90 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </button>
-              <button id="prev-comment" class="w-12 h-12 flex items-center justify-center rounded-xl border-2 border-[#05445E] text-[#05445E] hover:bg-[#05445E] hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- Comments Carousel -->
-          <div id="comments-container" class="relative">
-            <div class="comments-group absolute w-full transition-all duration-500 transform">
-              <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
-                <div class="flex items-center gap-6 mb-6">
-                  <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
-                    <span class="text-[#05445E] text-4xl font-bold">ع</span>
-                  </div>
-                  <div>
-                    <h4 class="text-xl font-bold text-gray-900">علی محمدی</h4>
-                    <p class="text-[#05445E]">عروسی</p>
-                    <div class="flex gap-1 mt-2">
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="mr-auto">
-                    <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
-                      <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-gray-600 leading-relaxed text-lg">تجربه‌ای فوق‌العاده با تیم تاشریفات سعادت داشتیم. همه چیز دقیقاً طبق برنامه پیش رفت و کیفیت خدمات عالی بود.</p>
-              </div>
-            </div>
-
-            <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
-              <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
-                <div class="flex items-center gap-6 mb-6">
-                  <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
-                    <span class="text-[#05445E] text-4xl font-bold">س</span>
-                  </div>
-                  <div>
-                    <h4 class="text-xl font-bold text-gray-900">سارا احمدی</h4>
-                    <p class="text-[#05445E]">سمینار</p>
-                    <div class="flex gap-1 mt-2">
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="mr-auto">
-                    <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
-                      <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-gray-600 leading-relaxed text-lg">برگزاری سمینار با این تیم حرفه‌ای، تجربه‌ای بی‌نظیر بود. توجه به جزئیات و کیفیت خدمات عالی بود.</p>
-              </div>
-            </div>
-
-            <!-- Comment 3 -->
-            <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
-              <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
-                <div class="flex items-center gap-6 mb-6">
-                  <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
-                    <span class="text-[#05445E] text-4xl font-bold">م</span>
-                  </div>
-                  <div>
-                    <h4 class="text-xl font-bold text-gray-900">مریم رضایی</h4>
-                    <p class="text-[#05445E]">مهمانی</p>
-                    <div class="flex gap-1 mt-2">
-                      <!-- Stars SVG -->
-                    </div>
-                  </div>
-                  <div class="mr-auto">
-                    <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
-                      <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-gray-600 leading-relaxed text-lg">از برنامه‌ریزی تا اجرا، همه چیز عالی بود. تیم خلاق و با تجربه‌ای که به کارش اعتقاد دارد.</p>
-              </div>
-            </div>
-
-            <!-- Comment 4 -->
-            <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
-              <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
-                <div class="flex items-center gap-6 mb-6">
-                  <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
-                    <span class="text-[#05445E] text-4xl font-bold">ر</span>
-                  </div>
-                  <div>
-                    <h4 class="text-xl font-bold text-gray-900">رضا حسینی</h4>
-                    <p class="text-[#05445E]">جشن تولد</p>
-                    <div class="flex gap-1 mt-2">
-                      <!-- Stars SVG -->
-                    </div>
-                  </div>
-                  <div class="mr-auto">
-                    <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
-                      <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-gray-600 leading-relaxed text-lg">برگزاری جشن تولد با این تیم، خاطره‌ای فراموش نشدنی شد. دکوراسیون و خدمات عالی بود.</p>
-              </div>
-            </div>
-
-            <!-- Comment 5 -->
-            <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
-              <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
-                <div class="flex items-center gap-6 mb-6">
-                  <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
-                    <span class="text-[#05445E] text-4xl font-bold">ف</span>
-                  </div>
-                  <div>
-                    <h4 class="text-xl font-bold text-gray-900">فاطمه کریمی</h4>
-                    <p class="text-[#05445E]">نامزدی</p>
-                    <div class="flex gap-1 mt-2">
-                      <!-- Stars SVG -->
-                    </div>
-                  </div>
-                  <div class="mr-auto">
-                    <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
-                      <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-gray-600 leading-relaxed text-lg">مراسم نامزدی ما با برنامه‌ریزی دقیق و خلاقانه به یک خاطره زیبا تبدیل شد.</p>
-              </div>
-            </div>
-
-            <!-- Comment 6 -->
-            <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
-              <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
-                <div class="flex items-center gap-6 mb-6">
-                  <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
-                    <span class="text-[#05445E] text-4xl font-bold">ح</span>
-                  </div>
-                  <div>
-                    <h4 class="text-xl font-bold text-gray-900">حسین نوری</h4>
-                    <p class="text-[#05445E]">همایش شرکتی</p>
-                    <div class="flex gap-1 mt-2">
-                      <!-- Stars SVG -->
-                    </div>
-                  </div>
-                  <div class="mr-auto">
-                    <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
-                      <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-gray-600 leading-relaxed text-lg">برگزاری همایش شرکتی ما با استانداردهای بالا، تأثیر مثبتی بر مهمانان داشت.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Section Title -->
+  <div class="py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center">نظرات مشتریان</h2>
+    </div>
   </div>
-</div>
 
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Text Content -->
+        <div class="space-y-6">
+          <h3 class="text-4xl font-bold text-gray-900">تجربه مشتریان ما</h3>
+          <p class="text-gray-600 leading-relaxed">
+            نظرات مشتریان رضایتمند ما را بخوانید. ببینید چگونه خدمات ما در برگزاری مراسم‌های مختلف، تجربه‌ای به یادماندنی برای آنها رقم زده است.
+          </p>
+          <div class="flex gap-4 mt-8">
+            <button id="next-comment" class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#05445E] text-white hover:bg-[#05445E]/90 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+            <button id="prev-comment" class="w-12 h-12 flex items-center justify-center rounded-xl border-2 border-[#05445E] text-[#05445E] hover:bg-[#05445E] hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Comments Carousel -->
+        <div id="comments-container" class="relative">
+          <div class="comments-group absolute w-full transition-all duration-500 transform">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
+              <div class="flex items-center gap-6 mb-6">
+                <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-[#05445E] text-4xl font-bold">ع</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-gray-900">علی محمدی</h4>
+                  <p class="text-[#05445E]">عروسی</p>
+                  <div class="flex gap-1 mt-2">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mr-auto">
+                  <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 leading-relaxed text-lg">تجربه‌ای فوق‌العاده با تیم تاشریفات سعادت داشتیم. همه چیز دقیقاً طبق برنامه پیش رفت و کیفیت خدمات عالی بود.</p>
+            </div>
+          </div>
+
+          <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
+              <div class="flex items-center gap-6 mb-6">
+                <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-[#05445E] text-4xl font-bold">س</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-gray-900">سارا احمدی</h4>
+                  <p class="text-[#05445E]">سمینار</p>
+                  <div class="flex gap-1 mt-2">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mr-auto">
+                  <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 leading-relaxed text-lg">برگزاری سمینار با این تیم حرفه‌ای، تجربه‌ای بی‌نظیر بود. توجه به جزئیات و کیفیت خدمات عالی بود.</p>
+            </div>
+          </div>
+
+          <!-- Comment 3 -->
+          <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
+              <div class="flex items-center gap-6 mb-6">
+                <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-[#05445E] text-4xl font-bold">م</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-gray-900">مریم رضایی</h4>
+                  <p class="text-[#05445E]">مهمانی</p>
+                  <div class="flex gap-1 mt-2">
+                    <!-- Stars SVG -->
+                  </div>
+                </div>
+                <div class="mr-auto">
+                  <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 leading-relaxed text-lg">از برنامه‌ریزی تا اجرا، همه چیز عالی بود. تیم خلاق و با تجربه‌ای که به کارش اعتقاد دارد.</p>
+            </div>
+          </div>
+
+          <!-- Comment 4 -->
+          <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
+              <div class="flex items-center gap-6 mb-6">
+                <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-[#05445E] text-4xl font-bold">ر</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-gray-900">رضا حسینی</h4>
+                  <p class="text-[#05445E]">جشن تولد</p>
+                  <div class="flex gap-1 mt-2">
+                    <!-- Stars SVG -->
+                  </div>
+                </div>
+                <div class="mr-auto">
+                  <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 leading-relaxed text-lg">برگزاری جشن تولد با این تیم، خاطره‌ای فراموش نشدنی شد. دکوراسیون و خدمات عالی بود.</p>
+            </div>
+          </div>
+
+          <!-- Comment 5 -->
+          <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
+              <div class="flex items-center gap-6 mb-6">
+                <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-[#05445E] text-4xl font-bold">ف</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-gray-900">فاطمه کریمی</h4>
+                  <p class="text-[#05445E]">نامزدی</p>
+                  <div class="flex gap-1 mt-2">
+                    <!-- Stars SVG -->
+                  </div>
+                </div>
+                <div class="mr-auto">
+                  <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 leading-relaxed text-lg">مراسم نامزدی ما با برنامه‌ریزی دقیق و خلاقانه به یک خاطره زیبا تبدیل شد.</p>
+            </div>
+          </div>
+
+          <!-- Comment 6 -->
+          <div class="comments-group absolute w-full transition-all duration-500 transform translate-x-full opacity-0">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-[#05445E]/10">
+              <div class="flex items-center gap-6 mb-6">
+                <div class="w-24 h-24 rounded-2xl bg-[#05445E]/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-[#05445E] text-4xl font-bold">ح</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-gray-900">حسین نوری</h4>
+                  <p class="text-[#05445E]">همایش شرکتی</p>
+                  <div class="flex gap-1 mt-2">
+                    <!-- Stars SVG -->
+                  </div>
+                </div>
+                <div class="mr-auto">
+                  <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[#05445E]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 leading-relaxed text-lg">برگزاری همایش شرکتی ما با استانداردهای بالا، تأثیر مثبتی بر مهمانان داشت.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
 {% endblock content %}

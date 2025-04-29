@@ -2,7 +2,7 @@ from typing import Any
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from site_module.models import SiteSetting
-from services_module.models import Gallery
+from services_module.models import Gallery , Service
 
 # Create your views here.
 
@@ -12,6 +12,7 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs: Any):
         context = super().get_context_data(**kwargs)
         context['img_home'] = Gallery.objects.filter(category='main', is_active=True)
+        context['services'] = Service.objects.filter(is_active=True)[:3]
         return context
 
 
