@@ -1,7 +1,5 @@
-from django.db.models.query import QuerySet
-from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from services_module.models import Service , Gallery , Menu , MenuItem
+from services_module.models import Service , Gallery , Menu 
 # Create your views here.
 
 
@@ -27,7 +25,7 @@ class ServiceDetailView(DetailView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['gallery'] = Gallery.objects.filter(category='other', is_active=True)
+        context['gallery'] = Gallery.objects.filter(category='other', service=self.object, is_active=True)
         context['menus'] = Menu.objects.filter(service=self.object)
         return context
     
