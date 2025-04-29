@@ -4,40 +4,66 @@
 {% block title %}{{ service.title }} - خدمات تشریفات{% endblock title %}
 
 {% block content %}
-<div id="service-detail" class="font-sans text-gray-900" dir="rtl">
-    <!-- Hero Section with Dynamic Background -->
-    <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+<div id="service-detail" class="font-iranyekan text-gray-900" dir="rtl">
+    <!-- Hero Section -->
+    <div class="relative w-full h-[500px] overflow-hidden">
+        <!-- Background Image with Overlay -->
         <div class="absolute inset-0">
             <img src="{{ service.image.url }}" alt="{{ service.title }}" class="w-full h-full object-cover transform scale-110">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#05445E]/90 via-[#05445E]/70 to-[#05445E]/50"></div>
+            <div class="absolute inset-0 bg-black/50"></div>
         </div>
-        <div class="relative z-10 max-w-5xl px-8">
-            <h1 class="text-6xl md:text-8xl font-bold mb-8 tracking-tight animate-fade-in">{{ service.title }}</h1>
-            <p class="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">{{ service.description }}</p>
-            <div class="flex justify-center gap-6">
-                <a href="#menu-section" class="inline-flex items-center px-8 py-4 bg-white text-[#05445E] rounded-xl text-lg font-semibold transition-all duration-300 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20">
-                    <span>منوی خدمات</span>
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+
+        <!-- Content -->
+        <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+            <!-- Category Badge -->
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-sm font-light tracking-wider text-white">تشریفات مجلل</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-white text-7xl font-bold mb-6 transform hover:scale-105 transition-transform duration-300 drop-shadow-lg">
+                {{ service.title }}
+            </h1>
+
+            <!-- Decorative Line -->
+            <div class="w-24 h-1 bg-white mb-8"></div>
+
+            <!-- Description -->
+            <p class="text-white text-2xl max-w-3xl leading-relaxed drop-shadow-lg">
+                {{ service.description|truncatewords:30 }}
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex items-center gap-6 mt-12">
+                <a href="#menu-section" 
+                   class="group relative inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full border border-white/20 text-white overflow-hidden">
+                    <span class="relative z-10 text-lg font-medium">مشاهده خدمات</span>
+                    <svg class="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/>
                     </svg>
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/30 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
                 </a>
-                <a href="#contact-section" class="inline-flex items-center px-8 py-4 bg-[#05445E] text-white rounded-xl text-lg font-semibold transition-all duration-300 hover:bg-[#05445E]/90 hover:shadow-lg hover:shadow-[#05445E]/20">
-                    <span>رزرو و مشاوره</span>
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                    </svg>
+                
+                <a href="#contact-section" 
+                   class="group relative inline-flex items-center gap-3 px-8 py-4 text-white">
+                    <span class="relative z-10 text-lg">رزرو</span>
+                    <div class="absolute bottom-0 left-0 right-0 h-px bg-white/50 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Service Description Section -->
     <section class="py-24 bg-white">
-        <div class="container mx-auto px-8">
+        <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
                 <div class="relative">
+                    <!-- Decorative Background -->
                     <div class="absolute -top-24 -right-24 w-48 h-48 bg-[#05445E]/5 rounded-full blur-3xl"></div>
                     <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-[#05445E]/5 rounded-full blur-3xl"></div>
+                    
+                    <!-- Content Card -->
                     <div class="relative bg-white rounded-3xl p-12 shadow-xl">
                         <h2 class="text-4xl font-bold text-gray-900 mb-8">توضیحات خدمات</h2>
                         <div class="prose prose-lg max-w-none">
@@ -49,97 +75,118 @@
         </div>
     </section>
 
-    <!-- Menu Section with Creative Design -->
+    <!-- Integrated Menu and Contact Section -->
     <section id="menu-section" class="py-24 bg-gradient-to-br from-gray-50 to-white">
-        <div class="container mx-auto px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 relative">
-                <span class="relative z-10">منوی خدمات</span>
-                <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#05445E]"></span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {% for menu in menus %}
-                <div class="group">
-                    <div class="relative h-full">
-                        <!-- Decorative Background -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#05445E]/5 to-transparent rounded-3xl transform transition-transform duration-500 group-hover:scale-105"></div>
-                        
-                        <!-- Main Content -->
-                        <div class="relative p-8 rounded-3xl border border-[#05445E]/10 bg-white/80 backdrop-blur-sm transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
-                            <!-- Menu Header -->
-                            <div class="flex items-center justify-between mb-8">
-                                <h3 class="text-2xl font-bold text-gray-900">{{ menu.title }}</h3>
-                                <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center group-hover:bg-[#05445E] transition-colors duration-300">
-                                    <svg class="w-6 h-6 text-[#05445E] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
+        <div class="container mx-auto px-4">
+            <div class="max-w-7xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">منوی خدمات و رزرو</h2>
+                    <div class="w-24 h-1 bg-[#05445E] mx-auto mb-8"></div>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">انتخاب خدمات مورد نظر و رزرو آنلاین</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Menu Cards -->
+                    <div class="lg:col-span-2">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {% for menu in menus %}
+                            <div class="group">
+                                <div class="relative h-full">
+                                    <!-- Card Background -->
+                                    <div class="absolute inset-0 bg-gradient-to-br from-[#05445E]/5 to-transparent rounded-3xl transform transition-transform duration-500 group-hover:scale-105"></div>
+                                    
+                                    <!-- Card Content -->
+                                    <div class="relative p-8 rounded-3xl border border-[#05445E]/10 bg-white/80 backdrop-blur-sm transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                                        <!-- Menu Header -->
+                                        <div class="flex items-center justify-between mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900">{{ menu.title }}</h3>
+                                            <div class="w-12 h-12 bg-[#05445E]/10 rounded-xl flex items-center justify-center group-hover:bg-[#05445E] transition-colors duration-300">
+                                                <svg class="w-6 h-6 text-[#05445E] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <!-- Menu Items -->
+                                        <ul class="space-y-4">
+                                            {% for item in menu.items.all %}
+                                            <li class="flex items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                                                <div class="w-10 h-10 bg-[#05445E]/10 rounded-lg flex items-center justify-center mr-4">
+                                                    <span class="text-[#05445E] font-semibold">{{ forloop.counter }}</span>
+                                                </div>
+                                                <span class="text-gray-700">{{ item.title }}</span>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+
+                                        <!-- Decorative Elements -->
+                                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#05445E]/5 rounded-full blur-2xl transform group-hover:scale-150 transition-transform duration-500"></div>
+                                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-[#05445E]/5 rounded-full blur-2xl transform group-hover:scale-150 transition-transform duration-500"></div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Menu Items -->
-                            <ul class="space-y-4">
-                                {% for item in menu.items.all %}
-                                <li class="flex items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-                                    <div class="w-10 h-10 bg-[#05445E]/10 rounded-lg flex items-center justify-center mr-4">
-                                        <span class="text-[#05445E] font-semibold">{{ forloop.counter }}</span>
-                                    </div>
-                                    <span class="text-gray-700">{{ item.title }}</span>
-                                </li>
-                                {% endfor %}
-                            </ul>
-
-                            <!-- Decorative Elements -->
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#05445E]/5 rounded-full blur-2xl transform group-hover:scale-150 transition-transform duration-500"></div>
-                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-[#05445E]/5 rounded-full blur-2xl transform group-hover:scale-150 transition-transform duration-500"></div>
+                            {% endfor %}
                         </div>
                     </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section with Modern Design -->
-    <section id="contact-section" class="py-24 bg-[#05445E]">
-        <div class="container mx-auto px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="relative">
-                    <div class="absolute -top-24 -right-24 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
-                    <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
-                    <div class="relative bg-white/10 backdrop-blur-sm rounded-3xl p-12 text-white">
-                        <h2 class="text-4xl font-bold mb-8">برای رزرو و مشاوره</h2>
-                        <p class="text-white/80 text-lg mb-12">کارشناسان ما آماده پاسخگویی به سوالات شما هستند</p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="space-y-6">
-                                <div class="flex items-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                                    <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-semibold mb-1">تماس تلفنی</h3>
-                                        <p class="text-white/80">۰۲۱-۱۲۳۴۵۶۷۸</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                                    <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-semibold mb-1">ایمیل</h3>
-                                        <p class="text-white/80">info@example.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                    <!-- Contact Card -->
+                    <div class="lg:col-span-1">
+                        <div class="sticky top-8">
                             <div class="relative">
-                                <img src="{% static 'images/contact-illustration.svg' %}" alt="Contact" class="w-full h-auto">
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#05445E] to-transparent opacity-50"></div>
+                                <!-- Card Background -->
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#05445E]/5 to-transparent rounded-3xl"></div>
+                                
+                                <!-- Card Content -->
+                                <div class="relative p-8 rounded-3xl border border-[#05445E]/10 bg-white/80 backdrop-blur-sm">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6">رزرو و مشاوره</h3>
+                                    <p class="text-gray-600 mb-8">کارشناسان ما آماده پاسخگویی به سوالات شما هستند</p>
+                                    
+                                    <!-- Contact Methods -->
+                                    <div class="space-y-6">
+                                        <!-- Phone -->
+                                        <div class="flex items-center p-4 bg-[#05445E]/5 rounded-xl">
+                                            <div class="w-12 h-12 bg-[#05445E]/10 rounded-lg flex items-center justify-center mr-4">
+                                                <svg class="w-6 h-6 text-[#05445E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900 mb-1">تماس تلفنی</h4>
+                                                <p class="text-gray-600">۰۲۱-۱۲۳۴۵۶۷۸</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Email -->
+                                        <div class="flex items-center p-4 bg-[#05445E]/5 rounded-xl">
+                                            <div class="w-12 h-12 bg-[#05445E]/10 rounded-lg flex items-center justify-center mr-4">
+                                                <svg class="w-6 h-6 text-[#05445E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900 mb-1">ایمیل</h4>
+                                                <p class="text-gray-600">info@example.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Quick Contact Form -->
+                                    <div class="mt-8">
+                                        <h4 class="font-semibold text-gray-900 mb-4">درخواست سریع</h4>
+                                        <form class="space-y-4">
+                                            <div>
+                                                <input type="text" placeholder="نام و نام خانوادگی" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#05445E] focus:ring-2 focus:ring-[#05445E]/20 outline-none transition-all duration-300">
+                                            </div>
+                                            <div>
+                                                <input type="tel" placeholder="شماره تماس" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#05445E] focus:ring-2 focus:ring-[#05445E]/20 outline-none transition-all duration-300">
+                                            </div>
+                                            <button type="submit" class="w-full px-6 py-3 bg-[#05445E] text-white rounded-xl font-medium hover:bg-[#05445E]/90 transition-colors duration-300">
+                                                ارسال درخواست
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,55 +195,30 @@
         </div>
     </section>
 
-    <!-- Gallery Section with Carousel -->
+    <!-- Gallery Section -->
     <section class="py-24 bg-gray-50">
-        <div class="container mx-auto px-8">
+        <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-16 relative">
                 <span class="relative z-10">گالری تصاویر</span>
                 <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#05445E]"></span>
             </h2>
 
-            <!-- Carousel Container -->
-            <div class="relative max-w-6xl mx-auto">
-                <div id="gallery-carousel" class="relative overflow-hidden rounded-2xl">
-                    <!-- Slides Container -->
-                    <div class="relative h-[600px]">
-                        {% for image in gallery %}
-                        <div class="slide absolute inset-0 w-full h-full transition-opacity duration-500 {% if forloop.first %}opacity-100{% else %}opacity-0{% endif %}"
-                             data-index="{{ forloop.counter0 }}">
-                            <img src="{{ image.image.url }}" 
-                                 alt="{{ image.description }}"
-                                 class="w-full h-full object-cover"
-                                 onclick="openLightbox('{{ image.image.url }}', '{{ image.description }}')">
-                            <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent">
-                                <p class="text-white text-xl">{{ image.description }}</p>
-                            </div>
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for image in gallery %}
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" onclick="openLightbox('{{ image.image.url }}', '{{ image.description }}')">
+                    <img src="{{ image.image.url }}" 
+                         alt="{{ image.description }}"
+                         class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#05445E]/70 via-[#05445E]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <p class="text-white text-lg font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                {{ image.description }}
+                            </p>
                         </div>
-                        {% endfor %}
-                    </div>
-
-                    <!-- Navigation Arrows -->
-                    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-all duration-300 shadow-lg hover:scale-110" onclick="prevSlide()">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </button>
-                    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-all duration-300 shadow-lg hover:scale-110" onclick="nextSlide()">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </button>
-
-                    <!-- Dots Navigation -->
-                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        {% for image in gallery %}
-                        <button class="dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 {% if forloop.first %}bg-white{% endif %}"
-                                data-index="{{ forloop.counter0 }}"
-                                onclick="goToSlide({{ forloop.counter0 }})">
-                        </button>
-                        {% endfor %}
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -218,6 +240,32 @@
 
 {% block extra_js %}
 <script>
+// Add custom animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Parallax effect for background patterns
+    window.addEventListener('mousemove', function(e) {
+        const patterns = document.querySelectorAll('.absolute.inset-0.opacity-10');
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        patterns.forEach(pattern => {
+            const offsetX = (mouseX - 0.5) * 20;
+            const offsetY = (mouseY - 0.5) * 20;
+            pattern.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        });
+    });
+});
+
+// Add shimmer animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+`;
+document.head.appendChild(style);
+
 // Lightbox functions
 function openLightbox(imageUrl, caption) {
     const lightbox = document.getElementById('lightbox');
@@ -249,47 +297,9 @@ document.addEventListener('keydown', function(e) {
         closeLightbox();
     }
 });
-
-// Gallery Carousel
-document.addEventListener('DOMContentLoaded', function() {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = slides.length;
-
-    window.goToSlide = function(index) {
-        slides[currentSlide].classList.add('opacity-0');
-        slides[currentSlide].classList.remove('opacity-100');
-        dots[currentSlide].classList.remove('bg-white');
-        dots[currentSlide].classList.add('bg-white/50');
-
-        currentSlide = index;
-
-        slides[currentSlide].classList.remove('opacity-0');
-        slides[currentSlide].classList.add('opacity-100');
-        dots[currentSlide].classList.add('bg-white');
-        dots[currentSlide].classList.remove('bg-white/50');
-    }
-
-    window.nextSlide = function() {
-        goToSlide((currentSlide + 1) % totalSlides);
-    }
-
-    window.prevSlide = function() {
-        goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
-    }
-
-    // Auto-advance slides
-    setInterval(nextSlide, 5000);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowRight') {
-            nextSlide();
-        } else if (e.key === 'ArrowLeft') {
-            prevSlide();
-        }
-    });
-});
 </script>
 {% endblock extra_js %}
+
+
+{% comment %} قسمت رزور و مشاوره در زیر منو ها قرار بگیره و منو ها به صورت جدول بندی شده باشه و تیتر هاشون بهتر و خلاقانه باشه و همینوطر فاصله ایی برای ایتم های منو از شماره هاشون قرار بگیره 
+ {% endcomment %}
