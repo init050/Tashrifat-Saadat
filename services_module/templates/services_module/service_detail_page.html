@@ -1,7 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}{{ service.title }} - خدمات تشریفات{% endblock title %}
+{% block title %}{{ service.title }} - خدمات تشریفات سعادت{% endblock title %}
+
+{% block meta_title %}{{ service.title }} - خدمات تشریفات سعادت{% endblock meta_title %}
+
+{% block meta_description %}{{ service.description|truncatewords:30 }} - تشریفات سعادت ارائه دهنده خدمات حرفه‌ای تشریفات مجالس با بهترین کیفیت{% endblock meta_description %}
+
+{% block meta_keywords %}{{ service.title }}, خدمات تشریفات مجالس, مراسم عروسی, جشن, رویداد, خدمات تشریفات, تشریفات سعادت{% endblock meta_keywords %}
+
+{% block meta_author %}تشریفات سعادت{% endblock meta_author %}
+
+{% block og_url %}{{ request.build_absolute_uri }}{% endblock og_url %}
+
+{% block og_title %}{{ service.title }} - خدمات تشریفات سعادت{% endblock og_title %}
+
+{% block og_description %}{{ service.description|truncatewords:30 }} - تشریفات سعادت ارائه دهنده خدمات حرفه‌ای تشریفات مجالس با بهترین کیفیت{% endblock og_description %}
+
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ service.image.url }}{% endblock og_image %}
+
+{% block twitter_url %}{{ request.build_absolute_uri }}{% endblock twitter_url %}
+
+{% block twitter_title %}{{ service.title }} - خدمات تشریفات سعادت{% endblock twitter_title %}
+
+{% block twitter_description %}{{ service.description|truncatewords:30 }} - تشریفات سعادت ارائه دهنده خدمات حرفه‌ای تشریفات مجالس با بهترین کیفیت{% endblock twitter_description %}
+
+{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{{ service.image.url }}{% endblock twitter_image %}
+
+{% block canonical_url %}{{ request.build_absolute_uri }}{% endblock canonical_url %}
+
+{% block app_title %}{{ service.title }} - تشریفات سعادت{% endblock app_title %}
 
 {% block content %}
 <div id="service-detail" class="font-iranyekan text-gray-900" dir="rtl">

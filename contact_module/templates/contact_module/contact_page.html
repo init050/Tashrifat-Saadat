@@ -1,7 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}تماس با ما{% endblock title %}
 
+{% block title %}تماس با تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock title %}
+
+{% block meta_title %}تماس با تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock meta_title %}
+
+{% block meta_description %}تماس با تشریفات سعادت - تیم متخصص ما آماده پاسخگویی به سؤالات و درخواست‌های شما در زمینه خدمات تشریفات مجالس و مراسم لوکس است{% endblock meta_description %}
+
+{% block meta_keywords %}تماس با تشریفات سعادت, ارتباط با تشریفات سعادت, آدرس تشریفات سعادت, شماره تماس تشریفات سعادت, ایمیل تشریفات سعادت{% endblock meta_keywords %}
+
+{% block meta_author %}تشریفات سعادت{% endblock meta_author %}
+
+{% block og_url %}{{ request.build_absolute_uri }}{% endblock og_url %}
+
+{% block og_title %}تماس با تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock og_title %}
+
+{% block og_description %}تماس با تشریفات سعادت - تیم متخصص ما آماده پاسخگویی به سؤالات و درخواست‌های شما در زمینه خدمات تشریفات مجالس و مراسم لوکس است{% endblock og_description %}
+
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/pattern.png' %}{% endblock og_image %}
+
+{% block twitter_url %}{{ request.build_absolute_uri }}{% endblock twitter_url %}
+
+{% block twitter_title %}تماس با تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock twitter_title %}
+
+{% block twitter_description %}تماس با تشریفات سعادت - تیم متخصص ما آماده پاسخگویی به سؤالات و درخواست‌های شما در زمینه خدمات تشریفات مجالس و مراسم لوکس است{% endblock twitter_description %}
+
+{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/pattern.png' %}{% endblock twitter_image %}
+
+{% block canonical_url %}{{ request.build_absolute_uri }}{% endblock canonical_url %}
 {% block content %}
 <!-- Add SweetAlert2 CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">

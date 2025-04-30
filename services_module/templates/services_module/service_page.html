@@ -1,8 +1,64 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    Services
+    خدمات تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس
 {% endblock title %}
+
+{% block meta_title %}
+    خدمات تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس
+{% endblock meta_title %}
+
+{% block meta_description %}
+    تشریفات سعادت ارائه دهنده خدمات حرفه‌ای تشریفات مجالس، مراسم عروسی، جشن‌ها و رویدادهای خاص با بهترین کیفیت و قیمت مناسب
+{% endblock meta_description %}
+
+{% block meta_keywords %}
+    خدمات تشریفات مجالس, مراسم عروسی, جشن, رویداد, خدمات تشریفات, تشریفات سعادت
+{% endblock meta_keywords %}
+
+{% block meta_author %}
+    تشریفات سعادت
+{% endblock meta_author %}
+
+{% block og_url %}
+    {{ request.build_absolute_uri }}
+{% endblock og_url %}
+
+{% block og_title %}
+    خدمات تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس
+{% endblock og_title %}
+
+{% block og_description %}
+    تشریفات سعادت ارائه دهنده خدمات حرفه‌ای تشریفات مجالس، مراسم عروسی، جشن‌ها و رویدادهای خاص با بهترین کیفیت و قیمت مناسب
+{% endblock og_description %}
+
+{% block og_image %}
+    {{ request.scheme }}://{{ request.get_host }}{% static 'img/img_home/h1.jpg' %}
+{% endblock og_image %}
+
+{% block twitter_url %}
+    {{ request.build_absolute_uri }}
+{% endblock twitter_url %}
+
+{% block twitter_title %}
+    خدمات تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس
+{% endblock twitter_title %}
+
+{% block twitter_description %}
+    تشریفات سعادت ارائه دهنده خدمات حرفه‌ای تشریفات مجالس، مراسم عروسی، جشن‌ها و رویدادهای خاص با بهترین کیفیت و قیمت مناسب
+{% endblock twitter_description %}
+
+{% block twitter_image %}
+    {{ request.scheme }}://{{ request.get_host }}{% static 'img/img_home/h1.jpg' %}
+{% endblock twitter_image %}
+
+{% block canonical_url %}
+    {{ request.build_absolute_uri }}
+{% endblock canonical_url %}
+
+{% block app_title %}
+    خدمات تشریفات سعادت
+{% endblock app_title %}
 
 {% block content %}
 <!-- Hero Section -->

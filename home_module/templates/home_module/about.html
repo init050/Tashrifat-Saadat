@@ -1,6 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}درباره ما{% endblock title %}
+
+{% block title %}درباره تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock title %}
+
+{% block meta_title %}درباره تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock meta_title %}
+
+{% block meta_description %}تشریفات سعادت با بیش از ۱۰ سال تجربه در برگزاری مراسم لوکس و جشن‌های باشکوه، ارائه دهنده خدمات حرفه‌ای تشریفات مجالس با کیفیت برتر{% endblock meta_description %}
+
+{% block meta_keywords %}درباره تشریفات سعادت, تاریخچه تشریفات سعادت, خدمات تشریفات مجالس, مراسم لوکس, جشن‌های باشکوه{% endblock meta_keywords %}
+
+{% block meta_author %}تشریفات سعادت{% endblock meta_author %}
+
+{% block og_url %}{{ request.build_absolute_uri }}{% endblock og_url %}
+
+{% block og_title %}درباره تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock og_title %}
+
+{% block og_description %}تشریفات سعادت با بیش از ۱۰ سال تجربه در برگزاری مراسم لوکس و جشن‌های باشکوه، ارائه دهنده خدمات حرفه‌ای تشریفات مجالس با کیفیت برتر{% endblock og_description %}
+
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/img_about/a1.jpg' %}{% endblock og_image %}
+
+{% block twitter_url %}{{ request.build_absolute_uri }}{% endblock twitter_url %}
+
+{% block twitter_title %}درباره تشریفات سعادت - خدمات حرفه‌ای تشریفات مجالس{% endblock twitter_title %}
+
+{% block twitter_description %}تشریفات سعادت با بیش از ۱۰ سال تجربه در برگزاری مراسم لوکس و جشن‌های باشکوه، ارائه دهنده خدمات حرفه‌ای تشریفات مجالس با کیفیت برتر{% endblock twitter_description %}
+
+{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/img_about/a1.jpg' %}{% endblock twitter_image %}
+
+{% block canonical_url %}{{ request.build_absolute_uri }}{% endblock canonical_url %}
+
+{% block app_title %}درباره تشریفات سعادت{% endblock app_title %}
 
 {% block content %}
 
