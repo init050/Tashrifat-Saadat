@@ -6,35 +6,35 @@
 
 {% block content %}
 <!-- Hero Section -->
-<div class="relative w-full h-[400px] overflow-hidden">
+<div class="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] overflow-hidden">
     <div class="absolute inset-0">
         <img src="{% static 'img/img_home/h1.jpg' %}" alt="Services" class="w-full h-full object-cover transform scale-110">
         <div class="absolute inset-0 bg-gradient-to-b from-[#05445E]/80 to-[#05445E]/40"></div>
     </div>
     <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
-        <h1 class="text-white text-7xl font-bold mb-6 transform hover:scale-105 transition-transform duration-300">خدمات ما</h1>
-        <div class="w-24 h-1 bg-white mb-8"></div>
-        <p class="text-white text-2xl max-w-3xl leading-relaxed">طراحی و اجرای مراسم‌های منحصر به فرد با کیفیت برتر</p>
+        <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 transform hover:scale-105 transition-transform duration-300">خدمات ما</h1>
+        <div class="w-16 sm:w-20 md:w-24 h-1 bg-white mb-4 sm:mb-6 md:mb-8"></div>
+        <p class="text-white text-lg sm:text-xl md:text-2xl max-w-3xl leading-relaxed">طراحی و اجرای مراسم‌های منحصر به فرد با کیفیت برتر</p>
     </div>
 </div>
 
 <!-- Services Section -->
-<section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-bold text-gray-900 mb-6">خدمات اختصاصی ما</h2>
-            <div class="w-24 h-1 bg-[#05445E] mx-auto mb-8"></div>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto">با تخصص و تجربه، مراسم‌های به یادماندنی را برای شما خلق می‌کنیم</p>
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">خدمات اختصاصی ما</h2>
+            <div class="w-16 sm:w-20 md:w-24 h-1 bg-[#05445E] mx-auto mb-6 sm:mb-8"></div>
+            <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-4">با تخصص و تجربه، مراسم‌های به یادماندنی را برای شما خلق می‌کنیم</p>
         </div>
 
         <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {% for service in services %}
             <div class="service-card group relative fade-up">
-                <div class="absolute inset-0 bg-[#05445E] rounded-3xl transform transition-transform duration-300 group-hover:scale-105"></div>
-                <div class="relative p-8 rounded-3xl border-2 border-[#05445E] bg-white transform transition-transform duration-300 group-hover:-translate-y-2">
+                <div class="absolute inset-0 bg-[#05445E] rounded-2xl sm:rounded-3xl transform transition-transform duration-300 group-hover:scale-105"></div>
+                <div class="relative p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border-2 border-[#05445E] bg-white transform transition-transform duration-300 group-hover:-translate-y-2">
                     <!-- Main Image -->
-                    <div class="relative aspect-w-16 aspect-h-9 mb-6 rounded-2xl overflow-hidden">
+                    <div class="relative aspect-w-16 aspect-h-9 mb-4 sm:mb-6 rounded-xl sm:rounded-2xl overflow-hidden">
                         {% if service.image %}
                             <img src="{{ service.image.url }}" 
                                  alt="{{ service.title }}" 
@@ -48,25 +48,25 @@
                     </div>
 
                     <!-- Content -->
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-bold text-gray-900 group-hover:text-[#05445E] transition-colors duration-300">{{ service.title }}</h3>
-                        <p class="text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
+                    <div class="space-y-3 sm:space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-[#05445E] transition-colors duration-300">{{ service.title }}</h3>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                             {{ service.short_description }}
                         </p>
 
                         <!-- Action Button -->
                         <a href="{% url 'service_detail_page' service.pk %}" 
-                           class="inline-flex items-center px-6 py-3 bg-[#05445E] text-white rounded-xl font-medium transition-all duration-300 hover:bg-[#05445E]/90 group-hover:shadow-lg group-hover:shadow-[#05445E]/20">
+                           class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-[#05445E] text-white text-sm sm:text-base rounded-lg sm:rounded-xl font-medium transition-all duration-300 hover:bg-[#05445E]/90 group-hover:shadow-lg group-hover:shadow-[#05445E]/20">
                             <span>اطلاعات بیشتر</span>
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                             </svg>
                         </a>
                     </div>
 
                     <!-- Decorative Elements -->
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#05445E]/5 rounded-full blur-3xl transform group-hover:scale-150 transition-transform duration-500"></div>
-                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-[#05445E]/5 rounded-full blur-3xl transform group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 bg-[#05445E]/5 rounded-full blur-3xl transform group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="absolute bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-[#05445E]/5 rounded-full blur-3xl transform group-hover:scale-150 transition-transform duration-500"></div>
                 </div>
             </div>
             {% endfor %}
@@ -75,13 +75,13 @@
 </section>
 
 <!-- Call to Action Section -->
-<section class="py-24 bg-gradient-to-br from-[#05445E] to-[#05445E]/90">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold text-white mb-8">آماده‌ایم تا رویای شما را به واقعیت تبدیل کنیم</h2>
-        <p class="text-white/80 text-lg mb-12 max-w-2xl mx-auto">با تیم متخصص ما، مراسم‌های به یادماندنی را با کیفیت برتر و قیمت مناسب برگزار کنید</p>
-        <a href="{% url 'contact_page' %}" class="inline-flex items-center px-8 py-4 bg-white text-[#05445E] rounded-xl font-medium transition-all duration-300 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20">
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#05445E] to-[#05445E]/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 md:mb-8">آماده‌ایم تا رویای شما را به واقعیت تبدیل کنیم</h2>
+        <p class="text-white/80 text-base sm:text-lg mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto px-4">با تیم متخصص ما، مراسم‌های به یادماندنی را با کیفیت برتر و قیمت مناسب برگزار کنید</p>
+        <a href="{% url 'contact_page' %}" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#05445E] text-sm sm:text-base rounded-lg sm:rounded-xl font-medium transition-all duration-300 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20">
             <span>تماس با ما</span>
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
         </a>
@@ -158,6 +158,13 @@
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
     }
+
+    /* Responsive Typography */
+    @media (max-width: 640px) {
+        .text-responsive {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+        }
+    }
 </style>
 
 <script>
@@ -169,7 +176,10 @@
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.1 });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
 
         document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
     });
