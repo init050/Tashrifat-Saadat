@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'services_module',
     'site_module',
     'django_render_partial',
+    'django_jalali',
 ]
 
 MIDDLEWARE = [
@@ -112,9 +113,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
@@ -135,3 +136,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Admin site customization
+ADMIN_SITE_HEADER = "پنل مدیریت تشریفات سعادت"
+ADMIN_SITE_TITLE = "پنل مدیریت تشریفات سعادت"
+ADMIN_INDEX_TITLE = "مدیریت سایت تشریفات سعادت"
