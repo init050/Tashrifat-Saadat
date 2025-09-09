@@ -21,7 +21,7 @@ Ready to run the project locally? Here’s how you can get it up and running.
 ### Prerequisites
 
 *   Python 3.8+
-*   Node.js and npm
+*   npm
 
 ### Installation and Setup
 
